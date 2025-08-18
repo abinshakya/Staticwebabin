@@ -1337,16 +1337,30 @@ window.addEventListener('load', () => {
 
             </div>
 <!-- Hero Section -->
+<!-- Hero Section -->
+<style>
+  /* Phone devices only */
+  @media only screen and (max-width: 600px) {
+    .hero-image img {
+      width: 90%;        /* mobile मा ठूलो image */
+      height: auto;      /* aspect ratio maintain */
+      aspect-ratio: 1/1; /* circle सुनिश्चित */
+    }
+  }
+</style>
+
 <section id="home" 
   class="min-h-screen flex flex-col justify-center items-center text-center px-4">
   
   <div class="hero-image relative mx-auto">
     <img src="Abin.png" alt="Abin Shakya"
-      class="w-40 sm:w-56 md:w-72 lg:w-80 h-auto rounded-2xl object-contain shadow-2xl mx-auto transition-all duration-700 ease-in-out hover:scale-105 hover:shadow-3xl bg-gray-200">
-  </div>
+      class="w-11/12 max-w-sm sm:max-w-sm md:max-w-sm lg:max-w-md xl:max-w-md
+             aspect-square rounded-full object-cover shadow-2xl mx-auto 
+             transition-all duration-700 ease-in-out 
+             hover:scale-105 hover:shadow-3xl bg-gray-200">
+  </div> 
+</section>
 
-  <h2 class="mt-6 text-2xl md:text-4xl font-bold">Hi, I'm Abin Shakya</h2>
- 
 
 </section>
 
@@ -1706,7 +1720,6 @@ window.addEventListener('load', () => {
     <script src="scripts/main.js"></script>
 </body>
 </html>
-
 
 
 
